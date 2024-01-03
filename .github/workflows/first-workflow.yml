@@ -11,3 +11,14 @@ jobs:
               run: |
                 python --version
                 node --version
+    parallel-job-macos:
+        runs-on: macos-latest
+        steps:
+            - name: View SW Version
+              run: sw_vers
+    dependent-job:
+        runs-on: windows-latest
+        needs: run-shell-command # This job depends on the run-shell-command job
+        steps:
+            - name: View Windows Version
+              run: systeminfo
