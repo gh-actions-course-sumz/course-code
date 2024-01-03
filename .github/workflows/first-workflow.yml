@@ -1,0 +1,13 @@
+name: First Workflow
+on: [push]
+
+jobs:
+    run-shell-command: # This is the name of the job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run a one-line script # This is the name of the step
+              run: echo "Hello, world!" # This is the shell command that will be run
+            - name: Run a multi-line script
+              run: |
+                python3 -v
+                pip3 -v
