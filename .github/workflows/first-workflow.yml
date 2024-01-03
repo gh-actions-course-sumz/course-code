@@ -9,5 +9,5 @@ jobs:
               run: echo "Hello, world!" # This is the shell command that will be run
             - name: Run a multi-line script
               run: |
-                python3 -v
-                pip3 -v
+                python -v
+                pip -v
